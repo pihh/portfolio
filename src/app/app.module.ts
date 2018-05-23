@@ -14,6 +14,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
+import { HomeComponent } from './_pages/home/home.component';
+import { BlogComponent } from './_pages/blog/blog.component';
+import { PreloaderComponent } from './_components/preloader/preloader.component';
+import { InlineMenuComponent } from './_components/inline-menu/inline-menu.component';
+import { BlockMenuComponent } from './_components/block-menu/block-menu.component';
+import { BlockAboutComponent } from './_components/block-about/block-about.component';
+import { BlockPortfolioComponent } from './_components/block-portfolio/block-portfolio.component';
+import { BlockBlogComponent } from './_components/block-blog/block-blog.component';
+import { BlockContactComponent } from './_components/block-contact/block-contact.component';
 
 // SERVICES
 
@@ -23,7 +32,16 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    BlogComponent,
+    PreloaderComponent,
+    InlineMenuComponent,
+    BlockMenuComponent,
+    BlockAboutComponent,
+    BlockPortfolioComponent,
+    BlockBlogComponent,
+    BlockContactComponent
   ],
   imports: [
     BrowserModule,
