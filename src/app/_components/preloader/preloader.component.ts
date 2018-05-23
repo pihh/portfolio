@@ -13,7 +13,7 @@ export class PreloaderComponent implements OnInit {
 
   leftClass: any = false;
   rightClass: any = false;
-  loaded: false;
+  loaded: boolean = false;
 
   constructor(private myElement: ElementRef) { }
 

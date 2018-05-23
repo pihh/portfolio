@@ -1,9 +1,9 @@
-<div class="inline-menu-container hidex">
+<div class="inline-menu-container {{menuClass}}">
     <ul class="inline-menu">
-        <li class="about menu-item">Resume</li>
-        <li class="portfolio menu-item">Portfolio</li>
-        <li class="blog menu-item">Blog</li>
-        <li class="contact menu-item">Contact</li>
-        <li id="close">×</li>
+        <li class="about menu-item {{about}}" (click)="openResume()">Resume</li>
+        <li class="portfolio menu-item {{portfolio}}" (click)="openPortfolio()">Portfolio</li>
+        <li class="blog menu-item {{blog}}" (click)="openBlog()">Blog</li>
+        <li class="contact menu-item {{contact}}" (click)="openContact()">Contact</li>
+        <li id="close" (click)="close()">×</li>
     </ul>
 </div>

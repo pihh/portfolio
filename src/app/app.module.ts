@@ -27,7 +27,7 @@ import { BlockContactComponent } from './_components/block-contact/block-contact
 import { BlockNameComponent } from './_components/block-name/block-name.component';
 
 // SERVICES
-
+import { PubSubService } from './_services/pub-sub.service';
 
 // PIPES
 
@@ -55,7 +55,7 @@ import { BlockNameComponent } from './_components/block-name/block-name.componen
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
-  providers: [],
+  providers: [PubSubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

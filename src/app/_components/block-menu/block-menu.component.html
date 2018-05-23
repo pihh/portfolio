@@ -1,22 +1,22 @@
 <div class="menu-blocks">
     <div class="about-block">
         <div class="about-block-container">
-            <h2 class="about menu-item">Resume</h2>
+            <h2 class="about menu-item {{about}}" (click)="openResume()">Resume</h2>
         </div>
     </div>
     <div class="portfolio-block">
         <div class="portfolio-block-container">
-            <h2 class="portfolio menu-item">Portfolio</h2>
+            <h2 class="portfolio menu-item {{portfolio}}" (click)="openPortfolio()">Portfolio</h2>
         </div>
     </div>
     <div class="blog-block">
         <div class="blog-block-container">
-            <h2 class="blog menu-item">Blog</h2>
+            <h2 class="blog menu-item {{blog}}" (click)="openBlog()">Blog</h2>
         </div>
     </div>
     <div class="contact-block">
         <div class="contact-block-container">
-            <h2 class="contact menu-item">Contact</h2>
+            <h2 class="contact menu-item {{contact}}" (click)="openContact()">Contact</h2>
         </div>
     </div>
 </div>
