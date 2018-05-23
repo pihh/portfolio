@@ -1,7 +1,7 @@
 const CONSTANTS = {
   SOCIAL: {
-    FACEBOOK: '',
-    LINKEDIN: ''
+    FACEBOOK: 'https://www.facebook.com/pihhhhh',
+    LINKEDIN: 'https://www.linkedin.com/in/filipe-mota-de-s%C3%A1-257639134/'
   },
   FIREBASE: {
     apiKey: 'AIzaSyCGSj1ZOt1YuA0EJ_TtqSn9J-a6xklUQoA',

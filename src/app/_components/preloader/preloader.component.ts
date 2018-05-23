@@ -13,19 +13,24 @@ export class PreloaderComponent implements OnInit {
 
   leftClass: any = false;
   rightClass: any = false;
+  loaded: false;
+
   constructor(private myElement: ElementRef) { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
-    const appRootRef = this.myElement // Necesarry because after setTimeout, 'this' becomes window
-    setTimeout(function() {
-      appRootRef.nativeElement.remove()
-    }, 1000);
-    if (!this.leftClass) {
-      this.leftClass = 'slide-left';
-      this.rightClass = 'slide-right';
+
+    if (!this.loaded) {
+      const appRootRef = this.myElement // Necesarry because after setTimeout, 'this' becomes window
+
+      this.loaded = true;
+      setTimeout(function() {
+        appRootRef.nativeElement.remove()
+      }, 1000);
+      // this.leftClass = 'slide-left';
+      // this.rightClass = 'slide-right';
     }
   }
 }
