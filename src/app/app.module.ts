@@ -23,6 +23,7 @@ import { BlockAboutComponent } from './_components/block-about/block-about.compo
 import { BlockPortfolioComponent } from './_components/block-portfolio/block-portfolio.component';
 import { BlockBlogComponent } from './_components/block-blog/block-blog.component';
 import { BlockContactComponent } from './_components/block-contact/block-contact.component';
+import { BlockNameComponent } from './_components/block-name/block-name.component';
 
 // SERVICES
 
@@ -41,7 +42,8 @@ import { BlockContactComponent } from './_components/block-contact/block-contact
     BlockAboutComponent,
     BlockPortfolioComponent,
     BlockBlogComponent,
-    BlockContactComponent
+    BlockContactComponent,
+    BlockNameComponent
   ],
   imports: [
     BrowserModule,
