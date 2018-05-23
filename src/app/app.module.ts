@@ -31,6 +31,7 @@ import { PubSubService } from './_services/pub-sub.service';
 
 // PIPES
 
+import { Globals } from './globals';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { PubSubService } from './_services/pub-sub.service';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
-  providers: [PubSubService],
+  providers: [PubSubService, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

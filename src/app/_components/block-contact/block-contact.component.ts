@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnDestroy } from '@angular/core';
 import { PubSubService } from '../../_services/pub-sub.service';
 
 @Component({

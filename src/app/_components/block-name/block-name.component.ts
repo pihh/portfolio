@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Globals } from '../../globals';
+
 import CONSTANTS from '../../../constants';
 
 @Component({
@@ -13,9 +16,16 @@ export class BlockNameComponent implements OnInit {
   facebook = CONSTANTS.SOCIAL.FACEBOOK;
   linkedin = CONSTANTS.SOCIAL.LINKEDIN;
 
-  constructor() { }
+  profile:any;
+
+  constructor(public globals: Globals) {
+    this.globals.load();
+
+  }
 
   ngOnInit() {
+    this.profile = this.globals.profile[0];
+    console.log(this.globals.profile);
   }
 
 }
