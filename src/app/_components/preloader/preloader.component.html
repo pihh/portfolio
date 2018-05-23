@@ -1,10 +1,11 @@
-<div class="preloader" style="display: none;">
+<div class="preloader" [@fadeOutAnimation]>
     <div class="spinner">
         <strong>
             Loading...
+            <br />
             <i class="fa-li fa fa-spinner fa-spin"></i>
         </strong>
     </div>
 </div>
-<div class="preloader-left slide-left"></div>
-<div class="preloader-right slide-right"></div>
+<div class="preloader-left slide-left" [ngClass]="leftClass ? leftClass: ''"></div>
+<div class="preloader-right slide-right" [ngClass]="rightClass ? rightClass : ''"></div>
