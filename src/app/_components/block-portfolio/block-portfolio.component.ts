@@ -15,18 +15,37 @@ export class BlockPortfolioComponent implements OnInit {
   showBlockAboutSubscription: any;
   closeMenuSubscription: any;
   portfolioSubscription: any = [];
+  profileSubscription: any;
 
   contentBlocksClass = 'hidex';
   blockClass = '';
 
+  profile = {};
 
-  constructor(private pubSubService: PubSubService , private db: DatabaseService) { }
+  constructor(private pubSubService: PubSubService , private db: DatabaseService) {
+    this.profile = {
+      name: '',
+      about: '',
+      address: '',
+      birth_date: '',
+      email: '',
+      interests: '',
+      phone: '',
+      skype: ''
+    };
+  }
 
   ngOnInit() {
     this.contentBlocksSubscription = this.pubSubService.on('hideAllAndShowOne').subscribe((block) => this.showBlock(block));
     this.showBlockAboutSubscription = this.pubSubService.on('showPortfolioContact').subscribe(() => this.openBlock());
     this.closeMenuSubscription = this.pubSubService.on('closeMenu').subscribe(() => this.showBlock('none'));
     this.portfolioSubscription = this.db.portfolio;
+
+    this.profileSubscription = this.db.profile.subscribe(data => {
+      if (data && Array.isArray(data) && data[0]) {
+        this.profile = data[0];
+      }
+    });
   }
 
   ngOnDestroy() {
@@ -34,6 +53,7 @@ export class BlockPortfolioComponent implements OnInit {
     this.showBlockAboutSubscription.unsubscribe();
     this.closeMenuSubscription.unsubscribe();
     this.portfolioSubscription.unsubscribe();
+    this.profileSubscription.unsubscribe();
   }
 
   showBlock(block) {
