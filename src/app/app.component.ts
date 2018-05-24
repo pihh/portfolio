@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs';
-import { Globals } from './globals';
+import { DatabaseService } from './_services/database.service';
 
 @Component({
   selector: 'app-root',
@@ -11,18 +9,13 @@ import { Globals } from './globals';
 export class AppComponent implements OnInit {
   title = 'app';
 
-  coursesObservable: Observable<any[]>;
 
-  constructor(private db: AngularFirestore , public globals: Globals) {
-    this.coursesObservable = this.getCourses('courses');
-    this.globals.load();
+  constructor(private db: DatabaseService) {
+
   }
 
   ngOnInit() {
 
   }
 
-  getCourses(collection: string): Observable<any[]> {
-    return this.db.collection(collection).valueChanges();
-  }
 }

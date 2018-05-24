@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnDestroy } from '@angular/core';
 
-import { Globals } from '../../globals';
+import { DatabaseService } from '../../_services/database.service';
 
 import CONSTANTS from '../../../constants';
 
@@ -9,23 +9,38 @@ import CONSTANTS from '../../../constants';
   templateUrl: './block-name.component.html',
   styleUrls: ['./block-name.component.scss']
 })
-export class BlockNameComponent implements OnInit {
+export class BlockNameComponent implements OnInit , OnDestroy {
 
-  name = 'Filipe Sá';
-  profession = 'Level 2 senior fullstack developer';
   facebook = CONSTANTS.SOCIAL.FACEBOOK;
   linkedin = CONSTANTS.SOCIAL.LINKEDIN;
 
-  profile:any;
+  profile = {};
+  profileSubscription: any;
 
-  constructor(public globals: Globals) {
-    this.globals.load();
-
+  constructor(private db: DatabaseService) {
+    this.profile = {
+      name: '',
+      about: '',
+      address: '',
+      birth_date: '',
+      email: '',
+      interests: '',
+      phone: '',
+      skype: ''
+    };
   }
 
   ngOnInit() {
-    this.profile = this.globals.profile[0];
-    console.log(this.globals.profile);
+    this.profileSubscription = this.db.profile.subscribe(data => {
+      if (data && Array.isArray(data) && data[0]) {
+        this.profile = data[0];
+
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.profileSubscription.unsubscribe();
   }
 
 }

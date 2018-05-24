@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // MODULES
 import { AppRoutingModule } from './app-routing.module';
@@ -28,10 +29,11 @@ import { BlockNameComponent } from './_components/block-name/block-name.componen
 
 // SERVICES
 import { PubSubService } from './_services/pub-sub.service';
+import { DatabaseService } from './_services/database.service';
+import { EllipsisPipe } from './_pipes/ellipsis.pipe';
 
 // PIPES
 
-import { Globals } from './globals';
 
 @NgModule({
   declarations: [
@@ -45,9 +47,11 @@ import { Globals } from './globals';
     BlockPortfolioComponent,
     BlockBlogComponent,
     BlockContactComponent,
-    BlockNameComponent
+    BlockNameComponent,
+    EllipsisPipe
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -56,7 +60,7 @@ import { Globals } from './globals';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
-  providers: [PubSubService, Globals],
+  providers: [PubSubService , DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,39 +4,38 @@
             <h3 class="block-title">Profile</h3>
             <div class="row">
                 <div class="col-md-7">
-                    <p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                    <p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                    {{profile.about}}
                     <img class="sign" alt="" src="assets/images/signature.png">
                 </div>
                 <div class="col-md-5">
                     <ul class="info-list">
                         <li>
                             <strong>Name : </strong>
-                            Filipe Mota de Sá
+                            {{profile.name}}
                         </li>
                         <li>
                             <strong>Date of birth : </strong>
-                            July 19, 1985
+                            {{profile.birth_date}}
                         </li>
-                        <li>
+                        <li >
                             <strong>Address : </strong>
-                            Praceta Gastão Ferreira nº4 - 2770-073, Oeiras, Portugal
+                            {{profile.address}}
                         </li>
                         <li>
                             <strong>Email : </strong>
-                            pihh@rocks.com
+                            {{profile.email}}
                         </li>
-                        <li>
+                        <!-- <li>
                             <strong>Phone : </strong>
                             + 351 919 373 033
-                        </li>
+                        </li> -->
                         <li>
                             <strong>Skype : </strong>
-                            Filipe.sa
+                            {{profile.skype}}
                         </li>
                         <li>
                             <strong>Interests : </strong>
-                            Web Development, Problem Solving, Nature , Open air festivals, Open air techno partys, Sports, Healthy lifestyle
+                            {{profile.interests}}
                         </li>
                     </ul>
                 </div>
@@ -47,131 +46,16 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h4>Technical Skills</h4>
-                    <label class="progress-bar-label">
-                        Laravel -
-                        <span>4 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" style="width: 85%;">
-                            <span>85%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        AngularJS -
-                        <span>3 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="69" role="progressbar" style="width: 75%;">
-                            <span>75%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Bootstrap  -
-                        <span>4 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="69" role="progressbar" style="width: 75%;">
-                            <span>75%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        HTML&CSS -
-                        <span>7+ years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="99" role="progressbar" style="width: 99%;">
-                            <span>99%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        MYSQL -
-                        <span>7+ years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="99" role="progressbar" style="width: 75%;">
-                            <span>75%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Javascript -
-                        <span>6 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 75%;">
-                            <span>75%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        PHP -
-                        <span>7 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 85%;">
-                            <span>85%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Npm , Bower, Gulp, Elixir -
-                        <span>3 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 85%;">
-                            <span>85%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        CoffeeScript , Typescript -
-                        <span>1.5 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 35%;">
-                            <span>35%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Less , Sass -
-                        <span>2 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 50%;">
-                            <span>50%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Node Js + mongodb -
-                        <span>No experience but anxiously waiting for a project to try what I learned in the course</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 25%;">
-                            <span>25%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        GIT -
-                        <span>2 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 50%;">
-                            <span>50%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Vagrant + Phuppet -
-                        <span>2 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 50%;">
-                            <span>50%</span>
-                        </div>
-                    </div>
-                    <label class="progress-bar-label">
-                        Wordpress -
-                        <span>4 years experience</span>
-                    </label>
-                    <div class="progress">
-                        <div class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="67" role="progressbar" style="width: 50%;">
-                            <span>50%</span>
-                        </div>
+                    <div *ngFor="let skill of skillSubscription | async">
+                      <label class="progress-bar-label" >
+                          {{skill.name}} -
+                          <span>{{skill.years}} years experience</span>
+                      </label>
+                      <div class="progress" >
+                        <ngb-progressbar type="warning" [value]="skill.experience_level" [striped]="true" [animated]="true">
+                          <span>{{skill.experience_level}}%</span>
+                        </ngb-progressbar>
+                      </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -179,25 +63,16 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="icon-list">
-                                <li>Tools & programming language choice for each project</li>
-                                <li>Lazy Coder ( I think before I act to save time and efforts )</li>
-                                <li>DRY Principle</li>
-                                <li>KISS Principle</li>
-                                <li>Performance Aware (code style, limit server hits , memory usage tests..)</li>
-                                <li>Secure Code</li>
-                                <li>Portability ( avoid hardcoded environmental parameters ) </li>
-                                <li></li>
+                              <ng-container *ngFor="let know of knowSubscription | async">
+                                <li *ngIf="know.type === 'know-how'">{{know.text}}</li>
+                              </ng-container>
                             </ul>
                         </div>
                         <div class="col-sm-6">
                             <ul class="icon-list">
-                                <li>OOP Whenever I Can</li>
-                                <li>Design Patterns (Coding)</li>
-                                <li>MVC Design Pattern (designed my own mvc framework)</li>
-                                <li>Semantic HTML</li>
-                                <li>Rich Snippet Usage</li>
-                                <li>Comments & Documentation</li>
-                                <li>Code Grouping</li>
+                              <ng-container *ngFor="let know of knowSubscription | async">
+                                <li *ngIf="know.type === 'good-practice'">{{know.text}}</li>
+                              </ng-container>
                             </ul>
                         </div>
                     </div>
@@ -210,29 +85,15 @@
                 <div class="row ">
                     <div class="col-md-12">
                         <div class="exp-holder">
-                            <div class="exp">
+                            <div class="exp" *ngFor="let experience of experienceSubscription | async">
                                 <div class="hgroup">
-                                    <h4>WebDesigner – Mutation Media </h4>
+                                    <h4>{{experience.name}} </h4>
                                     <h5>
-                                        Feb 2015 -
-                                        <span class="current">Current</span>
+                                        {{experience.from}} -
+                                        <span class="current" [ngClass]="(experience.to === 'current') ? 'current': ''">{{experience.to}}</span>
                                     </h5>
                                 </div>
-                                <p>Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            </div>
-                            <div class="exp">
-                                <div class="hgroup">
-                                    <h4>Web Developer – Mutation Media </h4>
-                                    <h5>Sept 2015 - Nov 2015</h5>
-                                </div>
-                                <p>Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            </div>
-                            <div class="exp">
-                                <div class="hgroup">
-                                    <h4>SDK Developer – Mutation Media </h4>
-                                    <h5>May 2015 - Sept 2015</h5>
-                                </div>
-                                <p>Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                <p>{{experience.description}}</p>
                             </div>
                         </div>
                     </div>
@@ -245,14 +106,14 @@
                 <div class="row ">
                     <div class="col-md-12">
                         <div class="exp-holder">
-                            <div class="exp">
+                            <div class="exp" *ngFor="let education of educationSubscription | async">
                                 <div class="hgroup">
-                                    <h4>Bachelor Degree – Mutation Media </h4>
-                                    <h5>Mar 2015 - May 2015</h5>
+                                    <h4>{{education.name}} </h4>
+                                    <h5>{{education.from}} - {{education.to}}</h5>
                                 </div>
-                                <p>Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                <p>{{education.description}}</p>
                             </div>
-                            <div class="exp">
+                            <!-- <div class="exp">
                                 <div class="hgroup">
                                     <h4>Master Degree – Mutation Media </h4>
                                     <h5>Sept 2015 - Nov 2015</h5>
@@ -265,7 +126,7 @@
                                     <h5>May 2015 - Sept 2015</h5>
                                 </div>
                                 <p>Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in reprehend incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -274,16 +135,16 @@
         <div class="block-content">
             <h3 class="block-title">Courses</h3>
             <div class="row">
-                <div class="col-sm-4 service">
+                <div class="col-sm-4 service" *ngFor="let course of courseSubscription | async">
                     <div class="service-icon">
-                        <i class=" fa fa-pencil"></i>
+                        <i class=" fa fa-{{course.icon}}"></i>
                     </div>
-                    <h4>Javascript + web apps</h4>
+                    <h4>{{course.name}}</h4>
                     <p>
-                        Building Mobile Apps With the Ionic Framework and AngularJS
+                        {{course.description}}
                     </p>
                 </div>
-                <div class="col-sm-4 service">
+                <!-- <div class="col-sm-4 service">
                     <div class="service-icon">
                         <i class=" fa fa-building"></i>
                     </div>
@@ -415,24 +276,15 @@
                     </div>
                     <h4>NodeJs</h4>
                     <p>Learn and understand NodeJS</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="block-content">
             <h3 class="block-title">Prizes</h3>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="col-sm-3 awards">
-                        <img alt="" src="assets/images/awards/1.jpg">
-                    </div>
-                    <div class="col-sm-3 awards">
-                        <img alt="" src="assets/images/awards/2.jpg">
-                    </div>
-                    <div class="col-sm-3 awards">
-                        <img alt="" src="assets/images/awards/3.jpg">
-                    </div>
-                    <div class="col-sm-3 awards">
-                        <img alt="" src="assets/images/awards/5.jpg">
+                    <div class="col-sm-3 awards" *ngFor="let prize of prizeSubscription | async">
+                        <img alt="" src="{{prize.image}}">
                     </div>
                 </div>
             </div>

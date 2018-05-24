@@ -12,18 +12,18 @@
                         <li data-filter=".apps">Apps</li>
                     </ul>
                     <div id="projects">
-                        <div class="project graphic apps">
-                            <a class="open-project" href="project-1.html">
+                        <div class="project graphic apps" *ngFor="let portfolio of portfolioSubscription | async">
+                            <a class="open-project" >
                                 <div class="project-overlay">
                                     <div class="vcenter">
                                         <div class="centrize">
-                                            <h4>Luxury Watch</h4>
-                                            <p>Graphic / Apps</p>
+                                            <h4>{{portfolio.name}}</h4>
+                                            <p>{{portfolio.description | ellipsis}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </a>
-                            <img alt="" src="assets/images/portfolio/1.jpg">
+                            <img alt="" src="{{portfolio.image}}">
                         </div>
                         <div class="project web apps">
                             <a class="open-project" href="project-2.html">

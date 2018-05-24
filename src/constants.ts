@@ -10,6 +10,9 @@ const CONSTANTS = {
     projectId: 'portfolio-8bb32',
     storageBucket: '',
     messagingSenderId: '757005383282'
+  },
+  ELLIPSIS: {
+    LIMIT: 25
   }
 };
 
