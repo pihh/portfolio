@@ -8,6 +8,6 @@ import {
 
 export const fadeOutAnimation = trigger('fadeOutAnimation', [
     transition(':enter', [   // :leave is alias to '* => void'
-      animate(1000, style({ opacity: 0 }))
+      animate(2500, style({ opacity: 0 }))
     ])
 ]);

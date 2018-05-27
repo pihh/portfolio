@@ -7,7 +7,7 @@ import { DatabaseService } from '../../_services/database.service';
   templateUrl: './block-about.component.html',
   styleUrls: ['./block-about.component.scss']
 })
-export class BlockAboutComponent implements OnInit {
+export class BlockAboutComponent implements OnInit, OnDestroy {
   block: string = 'about';
 
   contentBlocksSubscription: any;
@@ -17,7 +17,7 @@ export class BlockAboutComponent implements OnInit {
 
   skillSubscription: any = [];
   knowSubscription: any = [];
-  educationSubscription: any = [];
+  educationSubscription: any = [{createTime:0}];
   experienceSubscription: any = [];
   courseSubscription: any = [];
   prizeSubscription: any = [];
@@ -25,7 +25,16 @@ export class BlockAboutComponent implements OnInit {
   contentBlocksClass = 'hidex';
   blockClass = '';
 
-  profile = {};
+  profile = {
+    name: '',
+    about: '',
+    address: '',
+    birth_date: '',
+    email: '',
+    interests: '',
+    phone: '',
+    skype: ''
+  };
 
 
   constructor(private pubSubService: PubSubService, private db: DatabaseService) {

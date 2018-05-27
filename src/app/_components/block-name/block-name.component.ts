@@ -1,5 +1,7 @@
 import { Component, OnInit , OnDestroy } from '@angular/core';
 
+import * as jsPDF from 'jspdf';
+
 import { DatabaseService } from '../../_services/database.service';
 
 import CONSTANTS from '../../../constants';
@@ -14,7 +16,18 @@ export class BlockNameComponent implements OnInit , OnDestroy {
   facebook = CONSTANTS.SOCIAL.FACEBOOK;
   linkedin = CONSTANTS.SOCIAL.LINKEDIN;
 
-  profile = {};
+  profile = {
+    name: '',
+    about: '',
+    address: '',
+    birth_date: '',
+    email: '',
+    interests: '',
+    phone: '',
+    skype: '',
+    profession: ''
+  };
+
   profileSubscription: any;
 
   constructor(private db: DatabaseService) {
@@ -26,7 +39,8 @@ export class BlockNameComponent implements OnInit , OnDestroy {
       email: '',
       interests: '',
       phone: '',
-      skype: ''
+      skype: '',
+      profession: ''
     };
   }
 
@@ -43,4 +57,7 @@ export class BlockNameComponent implements OnInit , OnDestroy {
     this.profileSubscription.unsubscribe();
   }
 
+  download() {
+    alert('Website under construction, to view cv click on the Resume tab. Thanks, Filipe.');
+  }
 }

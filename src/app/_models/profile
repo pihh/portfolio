@@ -1,0 +1,10 @@
+export interface IProfile {
+  name: string;
+  about: string;
+  address: string;
+  birth_date: string;
+  email: string;
+  interests: string;
+  phone: string;
+  skype: string;
+};

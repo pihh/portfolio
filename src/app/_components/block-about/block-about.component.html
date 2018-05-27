@@ -1,4 +1,4 @@
-<div class="content-blocks about {{contentBlocksClass}} {{blockClass}}">
+<div class="content-blocks about {{contentBlocksClass}} {{blockClass}}" id="CV">
     <section id="about" class="content">
         <div class="block-content">
             <h3 class="block-title">Profile</h3>
@@ -90,9 +90,12 @@
                                     <h4>{{experience.name}} </h4>
                                     <h5>
                                         {{experience.from}} -
-                                        <span class="current" [ngClass]="(experience.to === 'current') ? 'current': ''">{{experience.to}}</span>
+                                        <span class="current" [ngClass]="experience.to=='current'?'current':''">{{experience.to}}</span>
                                     </h5>
                                 </div>
+                                <p>
+                                  <small>{{experience.job}}</small>
+                                </p>
                                 <p>{{experience.description}}</p>
                             </div>
                         </div>
@@ -106,7 +109,7 @@
                 <div class="row ">
                     <div class="col-md-12">
                         <div class="exp-holder">
-                            <div class="exp" *ngFor="let education of educationSubscription | async">
+                            <div class="exp" *ngFor="let education of educationSubscription | async | sort:'createTime'">
                                 <div class="hgroup">
                                     <h4>{{education.name}} </h4>
                                     <h5>{{education.from}} - {{education.to}}</h5>
@@ -134,10 +137,10 @@
         </div>
         <div class="block-content">
             <h3 class="block-title">Courses</h3>
-            <div class="row">
-                <div class="col-sm-4 service" *ngFor="let course of courseSubscription | async">
+            <div class="row masonry">
+                <div class="card service masonry-item" *ngFor="let course of courseSubscription | async">
                     <div class="service-icon">
-                        <i class=" fa fa-{{course.icon}}"></i>
+                        <i class="{{course.icon}}"></i>
                     </div>
                     <h4>{{course.name}}</h4>
                     <p>

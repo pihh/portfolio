@@ -7,3 +7,28 @@
     padding: 3px;
   }
 }
+
+.masonry { /* Masonry container */
+    column-count: 3;
+    column-gap: .5em;
+}
+
+.masonry-item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 .5em;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img{
+      width: 100%
+    }
+
+    &.card {
+      padding:5px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 5px;
+    }
+}

@@ -20,7 +20,16 @@ export class BlockPortfolioComponent implements OnInit {
   contentBlocksClass = 'hidex';
   blockClass = '';
 
-  profile = {};
+  profile = {
+    name: '',
+    about: '',
+    address: '',
+    birth_date: '',
+    email: '',
+    interests: '',
+    phone: '',
+    skype: ''
+  };
 
   constructor(private pubSubService: PubSubService , private db: DatabaseService) {
     this.profile = {

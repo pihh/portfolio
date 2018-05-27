@@ -3,6 +3,7 @@ import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 // PACKAGES
 import { AngularFireModule } from 'angularfire2';
@@ -10,6 +11,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MomentModule } from 'angular2-moment';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 // MODULES
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +34,7 @@ import { BlockNameComponent } from './_components/block-name/block-name.componen
 import { PubSubService } from './_services/pub-sub.service';
 import { DatabaseService } from './_services/database.service';
 import { EllipsisPipe } from './_pipes/ellipsis.pipe';
+import { SortPipe } from './_pipes/sort.pipe';
 
 // PIPES
 
@@ -48,7 +52,8 @@ import { EllipsisPipe } from './_pipes/ellipsis.pipe';
     BlockBlogComponent,
     BlockContactComponent,
     BlockNameComponent,
-    EllipsisPipe
+    EllipsisPipe,
+    SortPipe
   ],
   imports: [
     NgbModule.forRoot(),
@@ -58,7 +63,10 @@ import { EllipsisPipe } from './_pipes/ellipsis.pipe';
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    MomentModule,
+    FormsModule,
+    NgxMasonryModule
   ],
   providers: [PubSubService , DatabaseService],
   bootstrap: [AppComponent]

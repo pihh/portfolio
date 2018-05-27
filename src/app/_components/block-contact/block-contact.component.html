@@ -10,7 +10,7 @@
                         </div>
                         <div class="contact-details">
                             <h5>Address</h5>
-                            <p>234, London Street, EL10 6 BG</p>
+                            <div #gmap style="width:100%; height:277px"></div>
                         </div>
                     </div>
                     <div class="contact-content ">
@@ -18,8 +18,8 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <div class="contact-details">
-                            <h5>Call Us</h5>
-                            <p> +44 - 02920111222</p>
+                            <h5>Call Me</h5>
+                            <p> {{profile.phone}}</p>
                         </div>
                     </div>
                     <div class="contact-content ">
@@ -28,23 +28,23 @@
                         </div>
                         <div class="contact-details">
                             <h5>Enquiries</h5>
-                            <p>hello@james.com</p>
+                            <p> {{profile.email}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <form id="formcontactus" class="" action="php/contact_me.php" method="POST">
+                    <form id="formcontactus" class="" onsubmit="event.preventDefault();">
                         <div class="form-group">
-                            <input class="form-control requiretop" type="text" placeholder="* Your Name" name="name">
+                            <input class="form-control requiretop" type="text" placeholder="* Your Name" name="name" [(ngModel)]="name">
                         </div>
                         <div class="form-group">
-                            <input class="form-control requiretop" type="email" placeholder="* Your Email" name="email">
+                            <input class="form-control requiretop" type="email" placeholder="* Your Email" name="email" [(ngModel)]="email">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control requiretop" placeholder="* Your Message" name="message" rows="6"></textarea>
+                            <textarea class="form-control requiretop" placeholder="* Your Message" name="message" rows="6" [(ngModel)]="body"></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-dark selected" type="submit">Send Message</button>
+                            <a class="btn btn-dark selected" href="mailto:{{email}}?subject={{name}}&body={{body}}">Send Message</a>
                         </div>
                     </form>
                 </div>

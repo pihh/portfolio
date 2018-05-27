@@ -28,9 +28,8 @@ export class PreloaderComponent implements OnInit {
       this.loaded = true;
       setTimeout(function() {
         appRootRef.nativeElement.remove()
-      }, 1000);
-      // this.leftClass = 'slide-left';
-      // this.rightClass = 'slide-right';
+      }, 2400);
+
     }
   }
 }

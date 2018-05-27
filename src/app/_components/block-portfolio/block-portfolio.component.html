@@ -6,14 +6,29 @@
                 <div class="col-md-12">
                     <ul id="filters">
                         <li class="active" data-filter="*">All</li>
-                        <li data-filter=".graphic">Graphic</li>
+                        <!-- <li data-filter=".graphic">Graphic</li>
                         <li data-filter=".web">Web</li>
                         <li data-filter=".video">Video</li>
-                        <li data-filter=".apps">Apps</li>
+                        <li data-filter=".apps">Apps</li> -->
                     </ul>
                     <div id="projects">
-                        <div class="project graphic apps" *ngFor="let portfolio of portfolioSubscription | async">
-                            <a class="open-project" >
+                      <div class="masonry">
+                        <div class="masonry-item"  *ngFor="let portfolio of portfolioSubscription | async">
+                          <a class="open-project" >
+                              <div class="project-overlay">
+                                  <div class="vcenter">
+                                      <div class="centrize">
+                                          <h4>{{portfolio.name}}</h4>
+                                          <p>{{portfolio.description | ellipsis}}</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </a>
+                          <img alt="" src="{{portfolio.image}}">
+                        </div>
+                      </div>
+                        <!-- <div class="project graphic apps" *ngFor="let portfolio of portfolioSubscription | async">
+                            <!-- <a class="open-project" >
                                 <div class="project-overlay">
                                     <div class="vcenter">
                                         <div class="centrize">
@@ -22,9 +37,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            <img alt="" src="{{portfolio.image}}">
-                        </div>
+                            </a> -->
+                            <!-- <img alt="" src="{{portfolio.image}}">
+                        </div> -->
                         <!-- <div class="project web apps">
                             <a class="open-project" href="project-2.html">
                                 <div class="project-overlay">
